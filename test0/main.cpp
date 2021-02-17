@@ -3,6 +3,8 @@
 
 void stream_szetszed(vector <int> &v, string str);
 void print_vector(vector <int> v);
+void filebeolvas(vector <string> &v);
+void filekiir(vector <string> v);
 
 int main(int argc, char *argv[])
 {
@@ -12,6 +14,7 @@ int main(int argc, char *argv[])
 	vector <int> numbers;
 	Komplex n1(2.3,4.5);
 	double print = 0.0;
+	vector <string> in_file;
 
 	cout<<"Halo, ez meg nem ekezetes"<<endl;
 	cout<<"Ez már az: űűűöüúőpí"<<endl;
@@ -43,7 +46,32 @@ int main(int argc, char *argv[])
 	system("echo 3s...");
 	system("sleep 3");
 	system("clear"); */
+	filebeolvas(in_file);
+	cout<<in_file.size()<<endl;
+	filekiir(in_file);
+
 	return 0;
+}
+
+void filebeolvas(vector <string> &v){
+	string in_sor;
+	ifstream fin("test.log");
+	while(!fin.eof()){
+		getline(fin, in_sor);
+		v.push_back(in_sor);
+	}
+	fin.close();
+}
+
+void filekiir(vector <string> v){
+	cout<<"File tartalma:[ ";
+	for(int i = 0; i < v.size()-2; i++){
+		if(i == v.size()-3){
+			cout<<v[i]<<" ]"<<endl;
+		}else{
+			cout<<v[i]<<", ";
+		}
+	}
 }
 
 void stream_szetszed(vector <int> &v, string str){

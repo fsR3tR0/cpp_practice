@@ -24,6 +24,7 @@ void Komplex::setRe(double y){
 double Komplex::degre(){
 	double cuccos = new_Im/new_Re;
 	double tmp = atan(cuccos) * 180/PI;
+
 	return tmp;
 }
 
