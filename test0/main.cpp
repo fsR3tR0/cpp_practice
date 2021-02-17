@@ -1,6 +1,5 @@
 #include "include.h"
-
-using namespace std;
+#include "komplex.h"
 
 void stream_szetszed(vector <int> &v, string str);
 void print_vector(vector <int> v);
@@ -11,6 +10,8 @@ int main(int argc, char *argv[])
 	u16 in_u8 = 0;
 	string in_str, in_str2, in_numbers;
 	vector <int> numbers;
+	Komplex n1(2.3,4.5);
+	double print = 0.0;
 
 	cout<<"Halo, ez meg nem ekezetes"<<endl;
 	cout<<"Ez már az: űűűöüúőpí"<<endl;
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 	cin>>in_u8;
 	cin.ignore();
 	cout<<"Beolvasott szam erteke: "<<in_u8<<endl;
-	cout<<"Irjon be egy szoveget:";
+	cout<<"Irjon be egy szoveget: ";
 	getline(cin,in_str2);
 	cout<<in_str2<<endl;
 	cout<<"A szoveg merete: "<<in_str2.size()<<" - hossza: "<<in_str2.length()<<endl;
@@ -32,6 +33,11 @@ int main(int argc, char *argv[])
 	getline(cin, in_numbers);
 	stream_szetszed(numbers, in_numbers);
 	print_vector(numbers);
+	cout<<"==================="<<endl;
+	n1.setRe(1.1);
+	n1.setIm(2.2);
+	cout<<"Realis: "<<n1.getRe()<<", Imagiunarius: "<<n1.getIm()<<endl;
+	cout<<"Euler formula: "<<n1.length()<<"*e^j"<<n1.degre()<<" fok"<<endl;
 /*	cin>>in_u8;
 	cout<<in_u8<<endl;
 	system("echo 3s...");
@@ -57,13 +63,3 @@ void print_vector(vector <int> v){
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-

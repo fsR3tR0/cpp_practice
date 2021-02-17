@@ -7,6 +7,9 @@
 #include <vector>
 #include <string>
 #include <cstdlib>
+#include <math.h>
+
+using namespace std;
 
 typedef uint8_t u8;
 typedef uint16_t u16;

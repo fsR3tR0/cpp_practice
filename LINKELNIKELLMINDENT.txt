@@ -1,0 +1,1 @@
+g++ elso.cpp masodik.cpp ... -o valami
