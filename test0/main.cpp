@@ -1,11 +1,12 @@
 #include "include.h"
 #include "komplex.h"
-
+#include "functions.h"
+/*
 void stream_szetszed(vector <int> &v, string str);
 void print_vector(vector <int> v);
 void filebeolvas(vector <string> &v);
 void filekiir(vector <string> v);
-
+*/
 int main(int argc, char *argv[])
 {
 	setlocale(LC_ALL, "hun");
@@ -52,6 +53,7 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
+/*
 
 void filebeolvas(vector <string> &v){
 	string in_sor;
@@ -91,3 +93,4 @@ void print_vector(vector <int> v){
 		}
 	}
 }
+*/
