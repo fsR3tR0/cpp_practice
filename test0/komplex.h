@@ -7,6 +7,7 @@
 
 class Komplex{
 	public:
+	//	~Komplex();
 		Komplex(double, double);
 		double getIm();
 		double getRe();

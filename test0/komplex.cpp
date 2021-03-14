@@ -1,10 +1,19 @@
 #include "komplex.h"
 
 Komplex::Komplex(double Re, double Im){
-	new_Re = Re;
-	new_Im = Im;
+//	new_Re = new double
+	this->new_Re = Re;
+//	new_Im = new double;
+	this->new_Im = Im;
+	cout<<"Lefoglalva"<<endl;
 }
-
+/*
+Komplex::~Komplex(){
+	delete new_Re;
+	delete new_Im;
+	cout<<"felszabaditva"<<endl;
+}
+*/
 double Komplex::getIm(){
 	return new_Im;
 }

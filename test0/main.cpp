@@ -20,6 +20,16 @@ int main(int argc, char *argv[])
 	cout<<"Halo, ez meg nem ekezetes"<<endl;
 	cout<<"Ez már az: űűűöüúőpí"<<endl;
 
+	if(argc > 1){
+		printf("Bemeneti parameterek:\n");
+		for(u8 i = 1; i < argc; i++){
+			printf("%d. - '%s', ",i,argv[i]);
+		}
+		printf("\n");
+	}else{
+		printf("Nincs bemeneti parameter.\n");
+	}
+
 	cout<<"Irjon be egy szamot: ";
 	cin>>in_u8;
 	cin.ignore();
@@ -42,15 +52,30 @@ int main(int argc, char *argv[])
 	n1.setIm(2.2);
 	cout<<"Realis: "<<n1.getRe()<<", Imagiunarius: "<<n1.getIm()<<endl;
 	cout<<"Euler formula: "<<n1.length()<<"*e^j"<<n1.degre()<<" fok"<<endl;
+
+	filebeolvas(in_file);
+	cout<<in_file.size()<<endl;
+	filekiir(in_file);
+
+	cout<<"====== Kivetelkezeles ======="<<endl;
+	try{
+		cout<<"Irj be egy nem 0 erteku szamot"<<endl;
+		cin>>in_u8;
+		if(in_u8 == 0)
+			throw "Hiba, a szam 0!";
+		cout<<"A beolvasott szam: "<<in_u8<<endl;
+	}catch(const char *exc){
+		cout<<"ErrorCode: "<<exc<<endl;
+	}
+	cout<<"Shutdown..."<<endl;
+	system("sleep 2");
+	//system("clear");
+
 /*	cin>>in_u8;
 	cout<<in_u8<<endl;
 	system("echo 3s...");
 	system("sleep 3");
 	system("clear"); */
-	filebeolvas(in_file);
-	cout<<in_file.size()<<endl;
-	filekiir(in_file);
-
 	return 0;
 }
 /*
